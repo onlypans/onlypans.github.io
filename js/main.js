@@ -68,3 +68,6 @@ function getFormValue(method, url, data, success, error) {
     };
     request.send(data);
 }
+
+
+
