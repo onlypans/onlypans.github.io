@@ -8,7 +8,12 @@
 
 .navbar,
 .accordion-button {
-    background-color: #DB222A;
+    background-color: #fe302b;
+}
+
+.navIcon {
+    width: 2em;
+    height: 2em;
 }
 
 .karlaT {
@@ -20,6 +25,12 @@
     font-family: 'Roboto Condensed',
         sans-serif;
     color: RGB(85, 85, 83);
+}
+
+.faveText {
+    font-family: font-family: 'Merriweather Sans', sans-serif;
+    color: RGB(85, 85, 83);
+    text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .infoImg {
@@ -86,7 +97,7 @@
     text-align: start;
 }
 
-.modal-body {
+.reviewModal {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,7 +141,6 @@
     height: 100px;
     display: inline;
 }
-
 
 
 h1 {
@@ -405,6 +415,10 @@ h1 {
         width: 25%
     }
 }
+
+/* menu font css */
+
+
 
 @media screen and (max-width: 767px) {
     .reviews {

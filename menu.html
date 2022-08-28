@@ -155,7 +155,7 @@
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/home.html"><img src="/img/onlypans profile picture.jpeg" alt="" width="60"
+            <a class="navbar-brand" href="#"><img src="/img/onlypans profile picture.jpeg" alt="" width="60"
                     height="60"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -163,17 +163,24 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
-                    <!-- <li class="nav-item">
-                        <a class="nav-link text-white" aria-current="page" href="#" active>Sign In</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="/menu.html">Our Menu</a>
+                    <li class="nav-item ms-2 me-2">
+                        <button type="button" class="btn text-white fs-5 karlaT" data-bs-toggle="modal"
+                            data-bs-target="#signInModal">
+                            Sign In
+                        </button>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="/events.html">Events</a>
+                    <li class="nav-item ms-2 me-2">
+                        <a class="nav-link active text-white karlaT" aria-current="page" href="/index.html">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="/aboutUs.html">About Us</a>
+                    <li class="nav-item ms-2 me-2">
+                        <a class="nav-link active text-white karlaT" aria-current="page" href="/menu.html">Our
+                            Menu</a>
+                    </li>
+                    <li class="nav-item ms-2 me-2">
+                        <a class="nav-link text-white karlaT" href="/events.html">Events</a>
+                    </li>
+                    <li class="nav-item ms-2 me-2">
+                        <a class="nav-link text-white karlaT" href="/aboutUs.html">About Us</a>
                     </li>
                 </ul>
                 <span class="navbar-text">
@@ -182,7 +189,75 @@
             </div>
         </div>
     </nav>
-    <!-- Remove the container if you want to extend the Footer to full width. -->
+
+    <!-- signInModal start-->
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signInLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- <p class="text-start fs-6 fs-strong">ApplicationUser</p> -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="row mb-3">
+                            <button type="button" class="btn btn-danger col-3 ms-2">Sign In</button>
+                            <button type="button" class="btn btn-danger col-3 ms-auto me-3" data-bs-toggle="modal"
+                                data-bs-target="#signUpModal">
+                                Sign Up
+                            </button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- signInModal end -->
+
+
+    <!-- signUpModal start -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signUpLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="row mb-3">
+                            <button type="button" class="btn btn-danger col-3 ms-auto me-3" data-bs-toggle="modal"
+                                data-bs-target="#signUpModal">
+                                Sign Up
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- menu start -->
     <div class="container mt-5 mb-5">
         <div class="row">
             <div class="column">
@@ -191,15 +266,13 @@
                     <div class="middle">
                         <div>
                             <h5>Quesa Birria Taco</h5>
-                            <p><small class="text-muted">Slow cooked USDA beef in
-                                    authentic mexican chills and 16 spices with top grade mozarella cheese,
-                                    3 kinds of sauces, pico de gallo & lime.</small>
+                            <p>Slow cooked USDA beef in
+                                authentic mexican chills and 16 spices with top grade mozarella cheese,
+                                3 kinds of sauces, pico de gallo & lime.
                             </p>
                             <div class="row">
-                                <p class="col"><small class="text-muted text-dark">Solo: P380</small>
-                                </p>
-                                <p class="col"><small class="text-muted">Amigas: P750</small>
-                                </p>
+                                <p class="col">Solo: P380</p>
+                                <p>Amigas: P750</p>
                             </div>
                             <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
                                 data-bs-target="#quesabirriataco">
@@ -212,7 +285,7 @@
                 <div class="container1">
                     <img src="/img/Menu/Full size/carnicas taco.webp" alt="Avatar" class="image" style="width:100%">
                     <div class="middle">
-                        <h5 class="card-title">Carnitas Taco (pulled pork)</h5>
+                        <h5>Carnitas Taco (pulled pork)</h5>
                         <p class="card-text"><small class="text-muted">Slow cooked top grade pork meat
                                 in our housespecial recipe, topped with pickled onions and chipotle
                                 barbeque sauce</small>
@@ -305,18 +378,15 @@
                             <p class="card-text col"><small class="text-muted">Carne
                                     400</small>
                             </p>
-                            <p class="card-text col"><small class="text-muted">Camaron
+                            <p class="card-text col"><small class="text-muted">Pollo
+                                    300</small>
+                            </p>
+                            <!-- <p class="card-text col"><small class="text-muted">Camaron
                                     400</small>
                             </p>
                             <p class="card-text col"><small class="text-muted">Carnitas
                                     350</small>
-                            </p>
-                            <p class="card-text col"><small class="text-muted">Pollo
-                                    300</small>
-                            </p>
-                            <p class="card-text col"><small class="text-muted">Queso
-                                    250</small>
-                            </p>
+                            </p> -->
                         </div>
                         <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
                             data-bs-target="#quesadillas">
@@ -327,7 +397,7 @@
                 <div class="container1">
                     <img src="/img/Menu/Full size/borrito.webp" alt="Avatar" class="image" style="width:100%">
                     <div class="middle">
-                        <h5 class="card-title">Borrito</h5>
+                        <h5 class>Borrito</h5>
                         <p class="card-text"><small class="text-muted">Cilantro lime rice,
                                 choice of
                                 meat, beans, corn, cheese, with garlic sauce. Enjoy and be
@@ -351,7 +421,7 @@
                 <div class="container1">
                     <img src="/img/Menu/Full size/regules taco.jpeg" alt="Avatar" class="image" style="width:100%">
                     <div class="middle">
-                        <h5 class="card-title">Regulares Taco</h5>
+                        <h5>Regulares Taco</h5>
                         <p class="card-text"><small class="text-muted">Our one of a kind Mexican
                                 street tacos. Enjoy and savor our version of the famous street
                                 food.</small>
@@ -1099,110 +1169,82 @@
     </div>
 
     <!-- bottom navigation -->
-    <div>
-        <footer class="text-white text-center text-lg-start">
-            <!-- Grid container -->
-            <div class="container p-4">
-                <!--Grid row-->
-                <div class="row mt-4">
-                    <!--Grid column-->
-                    <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-                        <h5 class="text-uppercase mb-4">About Onlypans</h5>
-
-                        <p>
-                            Don't let the name deceive you! Onlypans offers you the best mexican food you can
-                            find.
-                        </p>
-
-                        <p>
-                            Our Quesa Birria Tacos with consomme is a mouth-watering marriage between premium
-                            beef
-                            and
-                            creamy melted cheese.
-                        </p>
-
-                        <div class="mt-4">
-                            <!-- Facebook -->
-                            <a type="button" class="btn btn-floating btn-danger btn-lg"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <!-- Dribbble -->
-                            <a type="button" class="btn btn-floating btn-danger btn-lg"><i
-                                    class="fab fa-dribbble"></i></a>
-                            <!-- Twitter -->
-                            <a type="button" class="btn btn-floating btn-danger btn-lg"><i
-                                    class="fab fa-twitter"></i></a>
-                            <!-- Google + -->
-                            <a type="button" class="btn btn-floating btn-danger btn-lg"><i
-                                    class="fab fa-google-plus-g"></i></a>
-                            <!-- Linkedin -->
-                        </div>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                        <ul class="fa-ul" style="margin-left: 1.65em; list-style: none;">
-                            <li class="mb-3">
-                                <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">5663
-                                    Don
-                                    Pedro, Makati, 1210 Metro Manila, Philippines</span>
-                            </li>
-                            <li class="mb-3">
-                                <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">+63
-                                    995
-                                    217
-                                    4326</span>
-                            </li>
-                            <li class="mb-3">
-                                <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">Service:
-                                    Dine-In and Take-Away
-                            </li>
-                            <li class="mb-3">
-                                <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">Order:
-                                    https://www.foodpanda.ph</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase mb-4">Opening hours</h5>
-
-                        <table class="table text-center text-white">
-                            <tbody class="font-weight-normal">
-                                <tr>
-                                    <td>Mon - Thu:</td>
-                                    <td>11am - 12mn</td>
-                                </tr>
-                                <tr>
-                                    <td>Fri - Sat:</td>
-                                    <td>11am - 2am</td>
-                                </tr>
-                                <tr>
-                                    <td>Sunday:</td>
-                                    <td>11am - 1am</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!--Grid column-->
+    <!-- footer start-->
+    <footer class="text-white text-center text-lg-start footer">
+        <div class="container p-4">
+            <div class="row mt-4">
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4 karenT">About Onlypans</h5>
+                    <p class="karlaP">Don't let the name deceive you! Onlypans offers you the best mexican food you
+                        can
+                        find.
+                    </p>
+                    <p>Our Quesa Birria Tacos with consomme is a mouth-watering marriage between premium beef and
+                        creamy melted cheese.
+                    </p>
                 </div>
-                <!--Grid row-->
-            </div>
-            <!-- Grid container -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <ul class="fa-ul" style="margin-left: 1.65em; list-style: none;">
+                        <li class="mb-3">
+                            <p>5663 Don Pedro, Makati, 1210 Metro Manila, Philippines</p>
+                        </li>
+                        <li class="mb-3">
+                            <p>+63 995 217 4326</p>
+                        </li>
+                        <li class="mb-3">
+                            <p>Service: Dine-In and Take-Away</p>
+                        <li class="mb-3">
+                            <p>Order: https://www.foodpanda.ph</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
 
-            <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2022 Copyright:
-                <a class="text-white" href="https://www.facebook.com/onlypansph/photos/?ref=page_internal">Onlypans
-                    Taqueria
-                    Poblacion</a>
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Opening hours</h5>
+
+                    <table class="table text-center text-white">
+                        <tbody class="font-weight-normal">
+                            <tr>
+                                <td>Mon - Thu:</td>
+                                <td>11am - 12mn</td>
+                            </tr>
+                            <tr>
+                                <td>Fri - Sat:</td>
+                                <td>11am - 2am</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday:</td>
+                                <td>11am - 1am</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--Grid column-->
             </div>
-            <!-- Copyright -->
-        </footer>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-white" href="https://www.facebook.com/onlypansph/photos/?ref=page_internal">Onlypans
+                Taqueria
+                Poblacion</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
 
     </div>
     <!-- End of .container -->
-
     <script src="/js/bootstrap.min.js"></script>
+    <script src="//code.tidio.co/u5bibbzqknrnwgkf6kr6liwybgw670ic.js" async></script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v14.0"
+        nonce="6mNoYMcY"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

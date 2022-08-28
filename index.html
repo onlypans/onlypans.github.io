@@ -30,23 +30,6 @@
 </head>
 
 <body>
-
-
-    <!-- <div class="row homepageTop pt-3 pb-5">
-        <div class="col-4 pt-3">
-            <p class="karlaP" style="display: inline">Order via</p>
-            <img src="/img/icons/foodpanda panda icon 2.30.32 PM.png" class="delivery">
-            <img src="/img/icons/grab icon.png" class="delivery">
-        </div>
-        <div class="col-4 onlypansicon pt-3 pb-5">
-            <img src="/img/icons/onlypansicon.png" class="img-fluid">
-        </div>
-        <div class="col-4 pt-3">
-            <img src="/img/icons/addtocart.png" class="img-fluid delivery">
-        </div>
-    </div> -->
-
-
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="/img/onlypans profile picture.jpeg" alt="" width="60"
@@ -57,23 +40,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
-                    <li class="nav-item">
+                    <li class="nav-item ms-2 me-2">
                         <button type="button" class="btn text-white fs-5 karlaT" data-bs-toggle="modal"
                             data-bs-target="#signInModal">
                             Sign In
                         </button>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ms-2 me-2">
                         <a class="nav-link active text-white karlaT" aria-current="page" href="/index.html">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ms-2 me-2">
                         <a class="nav-link active text-white karlaT" aria-current="page" href="/menu.html">Our
                             Menu</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ms-2 me-2">
                         <a class="nav-link text-white karlaT" href="/events.html">Events</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ms-2 me-2">
                         <a class="nav-link text-white karlaT" href="/aboutUs.html">About Us</a>
                     </li>
                 </ul>
@@ -84,88 +67,7 @@
         </div>
     </nav>
 
-    <!-- Sign Up Modal -->
-    <div class="modal fade" id="signUpModal" tabindex="1" aria-labelledby="signUpModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg bg-primary">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <h5 class="modal-title text-dark text-center karlaT" id="exampleModalLabel">ONLYPANS
-                    </h5>
-                </div>
-                <div class="modal-body">
-                    <div>
-                        <form action="/action_page.php" style="max-width:500px;margin:auto">
-                            <h2 class="karlaT">Sign Up</h2>
-                            <div class="input-container">
-                                <i class="fa fa-user icon"></i>
-                                <input class="input-field" type="text" placeholder="Username" name="usrnm">
-                            </div>
-                            <div class="input-container">
-                                <i class="fa fa-envelope icon"></i>
-                                <input class="input-field" type="text" placeholder="Email" name="email">
-                            </div>
-                            <div class="input-container">
-                                <i class="fa fa-key icon"></i>
-                                <input class="input-field" type="password" placeholder="Password" name="psw">
-                            </div>
-                            <button type="submit" class="btn">Sign Up</button>
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p class="text-start fs-6 fs-strong">ApplicationUser</p>
-                                            <form>
-                                                <div class="mb-3">
-                                                    <label for="exampleInputEmail1" class="form-label">Email
-                                                        address</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                                        aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="exampleInputEmail1" class="form-label">FullName</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                                        aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="exampleInputPassword1"
-                                                        class="form-label">Password</label>
-                                                    <input type="password" class="form-control"
-                                                        id="exampleInputPassword1">
-                                                </div>
-                                                <button type="button" class="btn btn-primary col-3 me-5">Sign
-                                                    Up</button>
-
-                                        </div>
-                                        <div class="modal-footer">
-                                            <!-- <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">Close</button> -->
-                                            <p class="text-start text-secondary">Sign up successful. Thanks for
-                                                registering
-                                                with us!
-                                                Go to <a href="/logIn.html">Login!</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!-- <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save Changes</button>
-            </div> -->
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Sign In Modal -->
+    <!-- signInModal start-->
     <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -185,55 +87,55 @@
                             <label for="exampleInputPassword1" class="form-label">Password</label>
                             <input type="password" class="form-control" id="exampleInputPassword1">
                         </div>
-                        <button type="button" class="btn btn-primary col-3 me-5">Sign In</button>
-                        <button type="button" class="btn btn-primary col-3 ms-auto me-3" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            Sign Up
-                        </button>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p class="text-start fs-6 fs-strong">ApplicationUser</p>
-                                        <form>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Email
-                                                    address</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                                    aria-describedby="emailHelp">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1">
-                                            </div>
-                                            <button type="button" class="btn btn-primary col-3 me-5">Sign
-                                                In</button>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <!-- <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button> -->
-                                        <p class="text-start text-secondary">Sign In successful
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="row mb-3">
+                            <button type="button" class="btn btn-danger col-3 ms-2">Sign In</button>
+                            <button type="button" class="btn btn-danger col-3 ms-auto me-3" data-bs-toggle="modal"
+                                data-bs-target="#signUpModal">
+                                Sign Up
+                            </button>
+
                         </div>
-                </div>
-                <div class="modal-footer">
-                    <!-- <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Close</button> -->
-                    <p class="text-start text-secondary">Sign up successful. Thanks for registering
-                        with us!
-                        Go to <a href="/logIn.html">Login!</a></p>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+    <!-- signInModal end -->
+
+
+    <!-- signUpModal start -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signUpLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="row mb-3">
+                            <button type="button" class="btn btn-danger col-3 ms-auto me-3" data-bs-toggle="modal"
+                                data-bs-target="#signUpModal">
+                                Sign Up
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- signUpModal end -->
 
     <!-- end of nav -->
 
@@ -253,35 +155,25 @@
                 <img src="">
             </div>
             <div class="card-group">
-                <div class="card container1 m-3">
+                <div class="card container1 m-3 text-center">
                     <img src="/img/Menu/Full size/favorites/quesa birria taco.png" class="card-img-top" alt="...">
-                    <h5 class="card-title middle">Card title</h5>
-                    <!-- <p class="card-text">This is a wider card.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                    <!-- <h5 class="card-title middle">Card title</h5> -->
+                    <p class="card-text faveText fs-3">Quesa Birria Taco</p>
                 </div>
-                <div class="card container1 m-3">
+                <div class="card container1 m-3 text-center">
                     <img src="/img/Menu/Full size/favorites/cartinas taco.png" class="card-img-top" alt="...">
-                    <!-- <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div> -->
+                    <!-- <h5 class="card-title">Card title</h5> -->
+                    <p class="card-text faveText fs-3">Cartinas Taco</p>
                 </div>
-                <div class="card container1 m-3">
+                <div class="card container1 m-3 text-center">
                     <img src="/img/Menu/Full size/favorites/camaron tostadas.png" class="card-img-top" alt="...">
-                    <!-- <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div> -->
+                    <!-- <h5 class="card-title">Card title</h5> -->
+                    <p class="card-text faveText fs-3">Camaron tostadas</p>
                 </div>
-                <div class="card container1 m-3">
+                <div class="card container1 m-3 text-center">
                     <img src="/img/Menu/Full size/favorites/quesadillas.png" class="card-img-top" alt="...">
-                    <!-- <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div> -->
+                    <!-- <h5 class="card-title">Card title</h5> -->
+                    <p class="card-text faveText fs-3">Quesadillas</p>
                 </div>
             </div>
         </div>
@@ -388,7 +280,8 @@
                                         alt="profile pic1">
                                     <p class="reviewName d-inline">Michael Nepomuceno</p>
                                     <p class="reviewActual mb-1">"The place was jam packed and when we got there
-                                        they're already sold out, but the owner informed me that they'll restock after 2
+                                        they're already sold out, but the owner informed me that they'll restock
+                                        after 2
                                         hours. Came back after 2 hours
                                         and was not disappointed. Ordered quesadilla and quesa birria (best seller),
                                         worth
@@ -409,11 +302,14 @@
                                         but I can’t wait so Foodpanda na lang! I ordered the Queso Birria Tacos and
                                         Cheese
                                         Quesadilla.
-                                        Their tacos are pretty loaded! It’s true that you get what you pay for. 1 taco
+                                        Their tacos are pretty loaded! It’s true that you get what you pay for. 1
+                                        taco
                                         and 2
                                         slices of quesadilla lang kinain ko for lunch and it was pretty filling.
-                                        Nasarapan ba ako? YES! I am aware of some feedback na maalat daw… happy to share
-                                        that mine wasn’t 🙌🏼 Maybe they tweaked the recipe na… so give it another shot
+                                        Nasarapan ba ako? YES! I am aware of some feedback na maalat daw… happy to
+                                        share
+                                        that mine wasn’t 🙌🏼 Maybe they tweaked the recipe na… so give it another
+                                        shot
                                         💖💖💖"</p>
                                 </div>
                             </div>
@@ -428,7 +324,8 @@
                                         alt="profile pic3">
                                     <p class="reviewName d-inline mb-1">Katriz Rafanan </p>
                                     <p class="reviewActual">"We visit the onlypans poblacion today and they are
-                                        doing sanitation & cleaning, we are very sad bec we drove 3 hrs from Rizal to
+                                        doing sanitation & cleaning, we are very sad bec we drove 3 hrs from Rizal
+                                        to
                                         Makati
                                         just to try the tacos! But the owner let us experience the goodness of their
                                         food 🥲
@@ -465,7 +362,7 @@
                         <h5 class="modal-title" id="reviewOneModal">Review</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body reviewModal">
                         <iframe
                             src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmichael.nepomuceno.10%2Fposts%2Fpfbid02zLnAzATJcKdyBqmCMyaRPaBtTTgf7RmKyN3PjvdXm5bqyQpGnasMDiFwnDb3DrmNl&show_text=true&width=500"
                             width="500" height="714" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
@@ -489,7 +386,7 @@
                         <h5 class="modal-title" id="reviewTwoModal">Review</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body reviewModal">
                         <iframe
                             src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fzuperbanana%2Fposts%2Fpfbid034iFqunqKCLv2Mieyurt53BYeR6Cpxk33Ljtc7zqar2hKKjMCpcrf16jbL7o1vo4ul&show_text=true&width=500"
                             width="500" height="556" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
@@ -511,7 +408,7 @@
                         <h5 class="modal-title" id="reviewTwoModal">Review</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body reviewModal">
                         <iframe <iframe
                             src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRafanaaaan%2Fposts%2Fpfbid0293Ds4k7a29ypoqZEBG8XZ3a8puMxaH2vkU3CJaWTFGGyiHzp4r7s9QNKjuNdqJXCl&show_text=true&width=500"
                             width="500" height="785" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
@@ -524,10 +421,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
         <!-- reviews modal end-->
 
     </div>
@@ -538,7 +431,8 @@
             <div class="row mt-4">
                 <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
                     <h5 class="text-uppercase mb-4 karenT">About Onlypans</h5>
-                    <p class="karlaP">Don't let the name deceive you! Onlypans offers you the best mexican food you can
+                    <p class="karlaP">Don't let the name deceive you! Onlypans offers you the best mexican food you
+                        can
                         find.
                     </p>
                     <p>Our Quesa Birria Tacos with consomme is a mouth-watering marriage between premium beef and
