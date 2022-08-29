@@ -43,7 +43,12 @@
     font-size: 35px;
 }
 
-
+.textForm h5,
+.textForm label,
+.textForm button {
+    font-family: font-family: 'Merriweather Sans', sans-serif;
+    color: RGB(85, 85, 83);
+}
 
 
 
