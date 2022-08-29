@@ -86,11 +86,11 @@
                         </div>
                         <div class="row mb-3">
                             <button type="button" class="btn btn-danger col-3 ms-2">Sign In</button>
-                            <button type="button" class="btn btn-danger col-3 ms-auto me-3" data-bs-toggle="modal"
-                                data-bs-target="#signUpModal">
-                                Sign Up
-                            </button>
-
+                            <div class="modal-footer">
+                                <!-- <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Close</button> -->
+                                <!-- <p class="text-start text-secondary">Sign up successful</p> -->
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -98,42 +98,6 @@
         </div>
     </div>
     <!-- signInModal end -->
-
-
-    <!-- signUpModal start -->
-    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="signUpLabel">Sign Up</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
-                        </div>
-                        <div class="row mb-3">
-                            <button type="button" class="btn btn-danger col-3 ms-auto me-3" data-bs-toggle="modal"
-                                data-bs-target="#signUpModal">
-                                Sign Up
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
 
     <div class="container-fluid">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
@@ -169,7 +133,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="text-center mb-5 p-5">
+        <div class="text-center mb-5 p-5 ourStory">
             <p class="fw-bold fs-2">Our Story</p>
             <p>Before being none for its tacos Onlypans started, not with a physical restaurant establishment as it is
                 today, but as a food delivery business with only one recipe: sushi bake. This was during the height of
@@ -228,7 +192,7 @@
                                 <textarea class="form-control" name="message" id="message" rows="10"
                                     maxlength="200"></textarea>
                             </div>
-                            <button class="btn btn-primary mt-2" id="test-form-submit">Submit</button>
+                            <button class="btn btn-danger mt-2" id="test-form-submit">Submit</button>
                         </form>
                         <div id="status" class="mt-2 text-center"></div>
                     </div>

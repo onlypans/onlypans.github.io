@@ -20,11 +20,11 @@ window.addEventListener("DOMContentLoaded", function () {
     function success() {
         form.reset();
         status.classList.add("success");
-        status.innerHTML = "Thanks for contacting Us😉. We will Reply to you ASAP";
+        status.innerHTML = "Thank you for contacting us.  We will reply to you ASAP.";
     }
     function error() {
         status.classList.add("error");
-        status.innerHTML = "Something went wrong, Error Sending Message";
+        status.innerHTML = "Something went wrong.  Message not sent.";
     }
     // function na maghahandle for submit with form
     form.addEventListener("submit", function (event) {
@@ -38,13 +38,13 @@ window.addEventListener("DOMContentLoaded", function () {
             function success() {
                 form.reset();
                 status.classList.add("success");
-                status.innerHTML = "Thanks for contacting Us😉. We will Reply to you ASAP";
+                status.innerHTML = "Thank you for contacting us.  We will reply to you ASAP.";
             }
             success();
         } else {
             function error() {
                 status.classList.add("error");
-                status.innerHTML = "Something went wrong, Error Sending Message";
+                status.innerHTML = "Something went wrong.  Message not sent.";
             }
             error();
         }
