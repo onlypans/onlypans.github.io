@@ -21,6 +21,22 @@
     color: RGB(85, 85, 83);
 }
 
+.karlaP {
+    font-family: 'Roboto Condensed',
+        sans-serif;
+    color: RGB(85, 85, 83);
+}
+
+.eventT {
+    font-family: font-family: 'Merriweather Sans', sans-serif;
+    color: RGB(85, 85, 83);
+}
+
+.eventP {
+    font-family: font-family: 'Merriweather Sans', sans-serif;
+    color: RGB(85, 85, 83);
+}
+
 .titleFavorite {
     font-family: font-family: 'Merriweather Sans', sans-serif;
     color: RGB(85, 85, 83);
@@ -28,11 +44,9 @@
 }
 
 
-.karlaP {
-    font-family: 'Roboto Condensed',
-        sans-serif;
-    color: RGB(85, 85, 83);
-}
+
+
+
 
 .textFavorite {
     font-family: 'Roboto Condensed',
@@ -494,7 +508,17 @@ h1 {
 @media screen and (max-width: 575px) {
 
     .imageTwoFavorite,
-    .textTwoFavorite {
-        display: inline-block;
+    .textTwoFavorite,
+
+}
+
+@media screen and (max-width: 575px) {
+
+    .eventOne,
+    .eventTwo {
+        display: flex;
+        flex-direction: column;
     }
+
+
 }

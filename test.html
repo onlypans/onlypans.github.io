@@ -6,47 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* a two column-layout instead of four columns */
-        @media screen and (max-width: 800px) {
-            .column {
-                flex: 50%;
-                max-width: 50%;
-            }
+        h1 {
+            font-family: 'Merriweather', serif;
         }
 
-        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
-            .column {
-                flex: 100%;
-                max-width: 100%;
-            }
+        .navbar {
+            background-color: #DB222A;
+        }
+
+        footer {
+            background-color: #053c5e;
         }
     </style>
-    <title>Home</title>
+    <title>Events</title>
 </head>
 
 <body>
-
-
-    <!-- <div class="row homepageTop pt-3 pb-5">
-        <div class="col-4 pt-3">
-            <p class="karlaP" style="display: inline">Order via</p>
-            <img src="/img/icons/foodpanda panda icon 2.30.32 PM.png" class="delivery">
-            <img src="/img/icons/grab icon.png" class="delivery">
-        </div>
-        <div class="col-4 onlypansicon pt-3 pb-5">
-            <img src="/img/icons/onlypansicon.png" class="img-fluid">
-        </div>
-        <div class="col-4 pt-3">
-            <img src="/img/icons/addtocart.png" class="img-fluid delivery">
-        </div>
-    </div> -->
-
-
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="/img/onlypans profile picture.jpeg" alt="" width="60"
@@ -57,23 +37,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
-                    <li class="nav-item">
+                    <li class="nav-item ms-2 me-2">
                         <button type="button" class="btn text-white fs-5 karlaT" data-bs-toggle="modal"
                             data-bs-target="#signInModal">
                             Sign In
                         </button>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ms-2 me-2">
                         <a class="nav-link active text-white karlaT" aria-current="page" href="/index.html">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ms-2 me-2">
                         <a class="nav-link active text-white karlaT" aria-current="page" href="/menu.html">Our
                             Menu</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ms-2 me-2">
                         <a class="nav-link text-white karlaT" href="/events.html">Events</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ms-2 me-2">
                         <a class="nav-link text-white karlaT" href="/aboutUs.html">About Us</a>
                     </li>
                 </ul>
@@ -84,44 +64,7 @@
         </div>
     </nav>
 
-    <div class="container">
-
-    </div>
-
-    <!-- Sign Up Modal -->
-    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="signUpLabel">Sign Up</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- <p class="text-start fs-6 fs-strong">ApplicationUser</p> -->
-                    <form>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
-                        </div>
-                        <button type="button" class="btn btn-primary col-3 me-5">Sign Up</button>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <!-- <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Close</button> -->
-                    <p class="text-start text-secondary">Sign up successful!
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Sign In Modal -->
+    <!-- signInModal start-->
     <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -141,339 +84,181 @@
                             <label for="exampleInputPassword1" class="form-label">Password</label>
                             <input type="password" class="form-control" id="exampleInputPassword1">
                         </div>
-                        <button type="button" class="btn btn-primary col-3 me-5">Sign In</button>
-                        <button type="button" class="btn btn-primary col-3 ms-auto me-3" data-bs-toggle="modal"
-                            data-bs-target="#signUpModal">
-                            Sign Up
-                        </button>
+                        <div class="row mb-3">
+                            <button type="button" class="btn btn-danger col-3 ms-2">Sign In</button>
+                            <button type="button" class="btn btn-danger col-3 ms-auto me-3" data-bs-toggle="modal"
+                                data-bs-target="#signUpModal">
+                                Sign Up
+                            </button>
+
+                        </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <!-- <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Close</button> -->
-                    <p class="text-start text-secondary">Sign up successful!
+            </div>
+        </div>
+    </div>
+    <!-- signInModal end -->
+
+
+    <!-- signUpModal start -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signUpLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="row mb-3">
+                            <button type="button" class="btn btn-danger col-3 ms-auto me-3" data-bs-toggle="modal"
+                                data-bs-target="#signUpModal">
+                                Sign Up
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- end of nav -->
-
-    <!-- favorites start -->
-
-    <!-- favorites end -->
-
-
-    <!-- location start -->
-    <div class="mt-1 mb-5">
-        <img src="/img/Carousel/onlyPansStore.png" class="img-fluid opacity-75">
+    <div class="eventHeader">
+        <img src="/img/eventsbackgroundheader resized.png" class="img-fluid mb-5">
     </div>
-    <!-- location end -->
 
-    <!-- favorite row start -->
-    <div class="container sectionOneFavorite">
-        <div class="row d-flex flex-md-row flex-sm-column mt-5 mb-5 ">
-            <div class="col imgFavorite1">
-                <img src="/img/Menu/quesa birria taco.png" class="card-img-top container1" alt="...">
-            </div>
-            <div class="col">
-                <h5 class="titleFavorite mb-3">Quesa Birria Taco</h5>
-                <p class="textFavorite">Easily our best seller, everyone who comes to OnlyPans come to have a taste of
-                    this delectible dish.</p>
-                <p class="textFavorite">To serve this dish USDA beef is slowly cooked in authentic mexican chills and 16
-                    spices with top grade mozzarella cheese, 3 kinds of sauces, pico de gallo & lime.</p>
-                <p class="textFavorite">Our customers who have tried our Quesa Birria Taco always come back to have a
-                    bite of this dish. </p>
-            </div>
-        </div>
-        <div class="row d-flex flex-md-row flex-sm-column mt-5 mb-5">
-            <div class="col ">
-                <h5 class="titleFavorite mb-3">Cartinas Taco</h5>
-                <p class="textFavorite">For those who opt to savor the flavor of pork we have Cartinas Taco to satisfy
-                    your cravings.</p>
-                <p class="textFavorite">Made from slow cooked top grade pork meat aat our house special recipe, topped
-                    with pickled onions and chipotle barbecue sauce.</p>
-                <p class="textFavorite">Truly, Cartinas Taco is an experience you will never forget.</p>
-            </div>
-            <div class="col imgFavorite2 mb-3">
-                <img src="/img/Menu/carnitas taco.png" class="card-img-top container1" alt="...">
-            </div>
-        </div>
-        <div class="row d-flex flex-md-row flex-sm-column mt-5 mb-5 ">
-            <div class="col imgFavorite1">
-                <img src="/img/Menu/camaron shrimp tostadas.png" class="card-img-top img-fluid" alt="...">
-            </div>
-            <div class="col">
-                <h5 class="titleFavorite mb-3">Camaron Tostadas</h5>
-                <p class="textFavorite">We you are a seafood type of person Camaron Tostadas will definitely suite your
-                    tastebud.</p>
-                <p class="textFavorite">This selection is cooked with fresh shrimp in house special marinade, dipped in
-                    beer batter & served with homemade coleslaw, alfalfa, red radish & pickled onions.</p>
-                <p class="textFavorite">You will, for sure, enjoy our offer.</p>
-            </div>
-        </div>
-        <div class="row d-flex flex-md-row flex-sm-column mt-5 mb-5">
-            <div class="col ">
-                <h5 class="titleFavorite mb-3">Quesadillas</h5>
-                <p class="textFavorite">After experiencing our best seller you might want to venture into our other
-                    choices. Quesadillas is definitely one of our best.</p>
-                <p class="textFavorite">Made with soft tortillas with your choice of meat filled with cheese and spices,
-                    served with house special sauces and pico de gallo.</p>
-                <p class="textFavorite">For the meat you can select beef, shrimp, pork, chicken or cheese. Truly, you
-                    would not get tired of it.</p>
-            </div>
-            <div class="col imgFavorite2 mb-3">
-                <img src="/img/Menu/quesadillas.png" class="card-img-top" alt="...">
-            </div>
-        </div>
-    </div>
-    <!-- favorite row end -->
-
-    <!-- favorite column start-->
-    <div class="container sectionTwoFavorite">
-        <div class="mt-5 mb-5">
-            <img src="/img/Menu/quesa birria taco.png" class="card-img-top container1" alt="...">
-            <h5 class="titleFavorite mb-3">Quesa Birria Taco</h5>
-            <p class="textFavorite">Easily our best seller, everyone who comes to OnlyPans come to have a taste of
-                this delectible dish.</p>
-            <p class="textFavorite">To serve this dish USDA beef is slowly cooked in authentic mexican chills and 16
-                spices with top grade mozzarella cheese, 3 kinds of sauces, pico de gallo & lime.</p>
-            <p class="textFavorite">Our customers who have tried our Quesa Birria Taco always come back to have a
-                bite of this dish. </p>
-        </div>
-        <div class="mt-5 mb-5">
-            <img src="/img/Menu/carnitas taco.png" class="card-img-top container1" alt="...">
-            <h5 class="titleFavorite mb-3">Cartinas Taco</h5>
-            <p class="textFavorite">For those who opt to savor the flavor of pork we have Cartinas Taco to satisfy
-                your cravings.</p>
-            <p class="textFavorite">Made from slow cooked top grade pork meat aat our house special recipe, topped
-                with pickled onions and chipotle barbecue sauce.</p>
-            <p class="textFavorite">Truly, Cartinas Taco is an experience you will never forget.</p>
-        </div>
-        <div class="mt-5 mb-5">
-            <h5 class="titleFavorite mb-3">Camaron Tostadas</h5>
-            <p class="textFavorite">We you are a seafood type of person Camaron Tostadas will definitely suite your
-                tastebud.</p>
-            <p class="textFavorite">This selection is cooked with fresh shrimp in house special marinade, dipped in
-                beer batter & served with homemade coleslaw, alfalfa, red radish & pickled onions.</p>
-            <p class="textFavorite">You will, for sure, enjoy our offer.</p>
-        </div>
-        <div class="mt-5 mb-5">
-            <img src="/img/Menu/quesadillas.png" class="card-img-top" alt="...">
-            <h5 class="titleFavorite mb-3">Quesadillas</h5>
-            <p class="textFavorite">After experiencing our best seller you might want to venture into our other
-                choices. Quesadillas is definitely one of our best.</p>
-            <p class="textFavorite">Made with soft tortillas with your choice of meat filled with cheese and spices,
-                served with house special sauces and pico de gallo.</p>
-            <p class="textFavorite">For the meat you can select beef, shrimp, pork, chicken or cheese. Truly, you
-                would not get tired of it.</p>
-        </div>
-    </div>
-    <!-- favorite column end -->
-
-
-    <!-- info start -->
-    <div class="mt-5 mb-5">
-        <!-- <h1 class="text-center display-3 karlaT">Onlypans Favorites</h1> -->
-        <div class="card-group row d-flex flex-row justify-content-center info">
-            <div class="card col-3 container1 info1">
-                <div class="text-center mb-2">
-                    <img src="/img/icons/delivery motorbike.jpeg" class="infoImg" alt="deliveryIcon">
-                </div>
-                <p class="infoT text-center">Order online</p>
-                <p class="infoP text-center"><a href="https://www.foodpanda.ph/restaurant/j5oj/onlypans-taqueria"
-                        target="_blank">Food
-                        Panda</a> and <a href="https://food.grab.com/ph/en/restaurant/error-delivery/2-C3AYC8CJMGJUHE"
-                        target="_blank">Grab</a>
+    <div class="container p-5 border rounded-top rounded-3 shadow-lg">
+        <div>
+            <div class="text-center mb-5 p-5">
+                <p class="fw-bold fs-3">LEGENDARY EVENTS, STUNNING CELEBRATIONS, WORTHY CAUSES</p>
+                <p class="fw-bold">Once upon a time, in a beige office conference room far far away, bored employees
+                    gathered over cold sandwiches pausing their conversation only to clap politely at their bored boss.
+                    They
+                    thought to themselves, “Do events always have to be so...boring!?”
+                    No, they don't!</p>
+                <p>At onlypans we bring you both mouth-watering, stomach-filling, mexican delights while enjoying the
+                    music-filled environment while hanging out with fun-loving, music-vibing generation. In addition, we
+                    join us one with the nation in holding worthy causes to help those in need.
                 </p>
+                <p class="fw-bold fs-3">WATCH THIS PAGE TO JOIN US IN OUR EVENTS AND CAUSES</p>
             </div>
-            <div class="card col-3 container1 info2">
-                <div class="text-center mb-2">
-                    <a href="https://www.facebook.com/onlypansph/?ref=page_internal" target="_blank"><img
-                            src="/img/icons/facebook.png" class="infoImg2 container1 img-rounded"
-                            alt="Only Pans Facebook Page"></a>
-                    <a href="https://www.instagram.com/onlypanspoblacion/?hl=en" target="_blank"><img
-                            src="/img/icons/instagram.png" class="infoImg2 container1 img-rounded"
-                            alt="Only Pans Instagram Page"></a>
-                </div>
-                <p class="infoT text-center">Our Facebook and Instagram Accounts</p>
-                <!-- <p class="infoP text-center">Click on icons to visit our social media accounts</p> -->
-            </div>
-            <div class="card col-3 container1 info3">
-                <div class="text-center mb-2">
-                    <img src="/img/icons/promo.png" class="infoImg" alt="promoIcon">
-                </div>
-                <p class="infoP text-center">Countdown to our promotion</p>
-                <p id="demo"></p>
-            </div>
-            <!-- <div class="card col-3 container1 info3">
-                    <div class="text-center">
-                        <img src="/img/icons/promo.png" class="infoImg3" alt="...">
+            <div class="row d-flex flex-md-row flex-sm-column align-items-center justify-content-evenly p-5">
+                <div class="col">
+                    <div class="card cardI">
+                        <div class="row g-0">
+                            <div class="col-md-12">
+                                <img src="/img/Events/Events 1/Event A resized.png"
+                                    class="img-fluid rounded-start content_img" alt="poster">
+                            </div>
+                            <div class="col-md-12">
+                                <div class="card-body">
+                                    <div>
+                                        <h5 class="card-title cardTitle fs-3">Sampiro Festival</h5>
+                                        <h5 class="card-title cardTitle">Poblacion Fiesta x Street Party</h5>
+                                        <h5 class="card-title cardTitle">Date: 07-02-2022</h5>
+                                        <p class="card-text">So thrilled to hit the streets with this awesome
+                                            neighborhood!
+                                            💙
+                                            Tomorrow, 0702, come join us as we bring back the iconic Población street
+                                            Party
+                                            after 2 long years! Catch us in Don Pedro & Alfonso street!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p class="infoT fs-5 fw-strong text-center">Promo</p>
-                    <p class="infoP text-center">Countdown to our promotion</p>
-                </div> -->
-        </div>
-    </div>
-    <!-- info end -->
-
-    <!-- promo start -->
-    <div class="container promoBackGround">
-        <p class="textCountDown text-center">Countdown to our promotion</p>
-        <p id="demo"></p>
-    </div>
-    <!-- promo end -->
-
-
-    <!-- reviews start carousel -->
-    <div class="reviews w-100 mt-5 mb-5 container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <button type="button" class="btn border-0" data-bs-toggle="modal" data-bs-target="#reviewOneModal">
-                        <div class="row text-center">
-                            <div class="col-12 mt-1">
-                                <img src="/img/reviews/Review profilepic1.png" class="d-inline img-fluid ms-5"
-                                    alt="profile pic1">
-                                <p class="reviewName d-inline">Michael Nepomuceno</p>
-                                <p class="reviewActual mb-1">"The place was jam packed and when we got there
-                                    they're already sold out, but the owner informed me that they'll restock after 2
-                                    hours. Came back after 2 hours
-                                    and was not disappointed. Ordered quesadilla and quesa birria (best seller),
-                                    worth
-                                    it! Will definitley come back!”</p>
+                </div>
+                <div class="col">
+                    <div class="card cardI">
+                        <div class="row g-0">
+                            <div class="col-md-12">
+                                <img src="/img/Events/Events 3/Pop Up resized.png"
+                                    class="img-fluid rounded-start content_img" alt="events">
+                            </div>
+                            <div class="col-md-12">
+                                <div class="card-body">
+                                    <div>
+                                        <h5 class="card-title cardTitle fs-3">onlypans Pop-Up Shop</h5>
+                                        <h5 class="card-title cardTitle">The Courtyard, Molito Lifestyle Center, Alabang
+                                        </h5>
+                                        <h5 class="card-title cardTitle">Date: Aug 19 & 20</h5>
+                                        <p class="card-text">South friends!!! We’ll be having our first ever pop up
+                                            kitchen
+                                            on
+                                            Friday & Saturday at Molito! We’re serving our Birria, Smoked Meat, Camaron
+                                            &
+                                            our
+                                            Vegan Tacos! See ya Alabangers! Come say hi 💃🏾 </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </button>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <button type="button" class="btn border-0" data-bs-toggle="modal" data-bs-target="#reviewTwoModal">
-                        <div class="row text-center">
-                            <div class="col-12 mt-1">
-                                <img src="/img/reviews/Review profilepic2.png" class="d-inline img-fluid ms-5"
-                                    alt="profile pic2">
-                                <p class="reviewName d-inline">Vanna JD</p>
-                                <p class="reviewActual mb-1">"Been wanting to pop by Poblacion for their tacos,
-                                    but I can’t wait so Foodpanda na lang! I ordered the Queso Birria Tacos and
-                                    Cheese
-                                    Quesadilla.
-                                    Their tacos are pretty loaded! It’s true that you get what you pay for. 1 taco
-                                    and 2
-                                    slices of quesadilla lang kinain ko for lunch and it was pretty filling.
-                                    Nasarapan ba ako? YES! I am aware of some feedback na maalat daw… happy to share
-                                    that mine wasn’t 🙌🏼 Maybe they tweaked the recipe na… so give it another shot
-                                    💖💖💖"</p>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <!-- <p class="fs-2 text-center">onlypans for a cause</p> -->
+            <div class="row m-2 d-flex flex-md-row flex-sm-column flex-align-items-center justify-content-evenly">
+                <div class="col">
+                    <div class="card cardI mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-12">
+                                <img src="/img/Events/Events 2/Typhoon Odette.png"
+                                    class="img-fluid content_img rounded-start" alt="poster">
+                            </div>
+                            <div class="col-md-12">
+                                <div class="card-body">
+                                    <div>
+                                        <h5 class="card-title cardTitle fs-3">Taco for a Cause</h5>
+                                        <h5 class="card-title cardTitle">100% total sales will be donated</h5>
+                                        <h5 class="card-title cardTitle">Date: 12-28-2021</h5>
+                                        <p class="card-text">Come say hi at New Deli by Kashmir - Sitio Uno, Lio Estate,
+                                            El
+                                            Nido
+                                            Palawan from 11am to 9pm. The entire 100% of sale will be donated for the
+                                            Odette
+                                            typhoon victims. Help us help them.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </button>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <button type="button" class="btn border-0" data-bs-toggle="modal"
-                        data-bs-target="#reviewThreeModal">
-                        <div class="row mt-1 text-center">
-                            <div class="col-12 mt-1">
-                                <img src="/img/reviews/Review profilepic3.png" class="d-inline img-fluid ms-5"
-                                    alt="profile pic3">
-                                <p class="reviewName d-inline mb-1">Katriz Rafanan </p>
-                                <p class="reviewActual">"We visit the onlypans poblacion today and they are
-                                    doing sanitation & cleaning, we are very sad bec we drove 3 hrs from Rizal to
-                                    Makati
-                                    just to try the tacos! But the owner let us experience the goodness of their
-                                    food 🥲
-                                    AAAAND THE FOOD WAS SO SO DELICIOUS AND OUTRAGEOUS!!!
-                                    CANT GET ENOUGH OF THEIR TACOS, THE BEST THEEEEE BEST 🌮😭😭😭😭😭😭😭
-                                    100/100 PERIODTTTT"</p>
+                <div class="col">
+                    <div class="card cardI mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-12">
+                                <img src="/img//Events/Events 2/Pride Month resized.png"
+                                    class="img-fluid content_img rounded-start" alt="events">
+                            </div>
+                            <div class="col-md-12">
+                                <div class="card-body">
+                                    <div>
+                                        <h5 class="card-title cardTitle fs-3">Metro Manila Pride</h5>
+                                        <h5 class="card-title cardTitle">Poblacion, Makati City</h5>
+                                        <h5 class="card-title cardTitle">Date: June 24</h5>
+                                        <p class="card-text">A part of our proceeds will benefit Metro Manila Pride
+                                            Organization, in support of the organization and our friends from the
+                                            LGBTQIA+
+                                            community.
+                                            Join us as we celebrate at the same time help our friends.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </button>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-    <!-- reviews end carousel-->
-
-    <!-- reviews modal start-->
-
-    <!-- reviewOneModal start -->
-    <div class="modal fade" id="reviewOneModal" tabindex="-1" aria-labelledby="reviewOneModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="reviewOneModal">Review</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body iframeCenter">
-                    <iframe
-                        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmichael.nepomuceno.10%2Fposts%2Fpfbid02zLnAzATJcKdyBqmCMyaRPaBtTTgf7RmKyN3PjvdXm5bqyQpGnasMDiFwnDb3DrmNl&show_text=true&width=500"
-                        width="500" height="714" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                        allowfullscreen="true"
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- reviewOneModal end -->
-
-    <!-- reviewTwoModal start -->
-    <div class="modal fade" id="reviewTwoModal" tabindex="-1" aria-labelledby="reviewTwoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="reviewTwoModal">Review</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body iframeCenter">
-                    <iframe
-                        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fzuperbanana%2Fposts%2Fpfbid034iFqunqKCLv2Mieyurt53BYeR6Cpxk33Ljtc7zqar2hKKjMCpcrf16jbL7o1vo4ul&show_text=true&width=500"
-                        width="500" height="556" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                        allowfullscreen="true"
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- reviewTwoModal end -->
-    <div class="modal fade" id="reviewThreeModal" tabindex="-1" aria-labelledby="reviewThreeModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="reviewTwoModal">Review</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body iframeCenter">
-                    <iframe <iframe
-                        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRafanaaaan%2Fposts%2Fpfbid0293Ds4k7a29ypoqZEBG8XZ3a8puMxaH2vkU3CJaWTFGGyiHzp4r7s9QNKjuNdqJXCl&show_text=true&width=500"
-                        width="500" height="785" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                        allowfullscreen="true"
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -482,17 +267,15 @@
 
 
 
-    <!-- reviews modal end-->
-
-    </div>
-
+    <!-- Remove the container if you want to extend the Footer to full width. -->
     <!-- footer start-->
     <footer class="text-white text-center text-lg-start footer">
         <div class="container p-4">
             <div class="row mt-4">
                 <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
                     <h5 class="text-uppercase mb-4 karenT">About Onlypans</h5>
-                    <p class="karlaP">Don't let the name deceive you! Onlypans offers you the best mexican food you can
+                    <p class="karlaP">Don't let the name deceive you! Onlypans offers you the best mexican food you
+                        can
                         find.
                     </p>
                     <p>Our Quesa Birria Tacos with consomme is a mouth-watering marriage between premium beef and
@@ -558,34 +341,10 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="//code.tidio.co/u5bibbzqknrnwgkf6kr6liwybgw670ic.js" async></script>
     <div id="fb-root"></div>
+    <script src="https://kit.fontawesome.com/b8a53061f1.js" crossorigin="anonymous"></script>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v14.0"
         nonce="6mNoYMcY"></script>
     <script src="main.js"></script>
-    <script src="https://kit.fontawesome.com/b8a53061f1.js" crossorigin="anonymous"></script>
-    <script>var countDownDate = new Date("Oct 1, 2022 00:00:00").getTime();
-
-        // Update the count down every 1 second
-        var x = setInterval(function () {
-
-            // Get today's date and time
-            var now = new Date().getTime();
-
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Output the result in an element with id="demo"
-            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-                + minutes + "m " + seconds + "s ";
-
-            // If the count down is over, write some text
-            if (distance < 0) { clearInterval(x); document.getElementById("demo").innerHTML = "EXPIRED"; }
-        }, 1000);</script>
 </body>
 
 </html>
