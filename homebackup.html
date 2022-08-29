@@ -59,22 +59,26 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
                     <li class="nav-item">
                         <button type="button" class="btn text-white fs-5 karlaT" data-bs-toggle="modal"
-                            data-bs-target="#signInModal">
+                            data-bs-target="#signInModal"><i class="fa-solid fa-arrow-right-to-bracket"></i>
                             Sign In
                         </button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white karlaT" aria-current="page" href="/index.html">Home</a>
+                        <a class="nav-link active text-white karlaT" aria-current="page" href="/index.html"><i
+                                class="fa-solid fa-house-user fa-fw"></i>Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white karlaT" aria-current="page" href="/menu.html">Our
+                        <a class="nav-link active text-white karlaT" aria-current="page" href="/menu.html"><i
+                                class="fa-solid fa-utensils fa-fw"></i>Our
                             Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white karlaT" href="/events.html">Events</a>
+                        <a class="nav-link text-white karlaT" href="/events.html"><i
+                                class="fa-regular fa-calendar fa-fw"></i>Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white karlaT" href="/aboutUs.html">About Us</a>
+                        <a class="nav-link text-white karlaT" href="/aboutUs.html"><i
+                                class="fa-solid fa-info fa-fw"></i>About Us</a>
                     </li>
                 </ul>
                 <span class="navbar-text">
@@ -382,7 +386,7 @@
                     <img src="/img/icons/promo.png" class="infoImg" alt="promoIcon">
                 </div>
                 <p class="infoP text-center">Countdown to our promotion</p>
-                <p id="demo"></p>
+                <!-- <p id="demo"></p> -->
             </div>
             <!-- <div class="card col-3 container1 info3">
                     <div class="text-center">
@@ -394,6 +398,13 @@
         </div>
     </div>
     <!-- info end -->
+
+    <!-- promo start -->
+    <div class="container promoBackGround">
+        <p class="textCountDown text-center">Countdown to our promotion</p>
+        <p id="demo"></p>
+    </div>
+    <!-- promo end -->
 
     <!-- reviews start carousel -->
     <div class="reviews w-100 mt-5 mb-5 container">
@@ -490,7 +501,7 @@
                     <h5 class="modal-title" id="reviewOneModal">Review</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body iframeCenter">
                     <iframe
                         src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmichael.nepomuceno.10%2Fposts%2Fpfbid02zLnAzATJcKdyBqmCMyaRPaBtTTgf7RmKyN3PjvdXm5bqyQpGnasMDiFwnDb3DrmNl&show_text=true&width=500"
                         width="500" height="714" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
@@ -513,7 +524,7 @@
                     <h5 class="modal-title" id="reviewTwoModal">Review</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body iframeCenter">
                     <iframe
                         src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fzuperbanana%2Fposts%2Fpfbid034iFqunqKCLv2Mieyurt53BYeR6Cpxk33Ljtc7zqar2hKKjMCpcrf16jbL7o1vo4ul&show_text=true&width=500"
                         width="500" height="556" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
@@ -535,8 +546,8 @@
                     <h5 class="modal-title" id="reviewTwoModal">Review</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <iframe <iframe
+                <div class="modal-body iframeCenter">
+                    <iframe
                         src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRafanaaaan%2Fposts%2Fpfbid0293Ds4k7a29ypoqZEBG8XZ3a8puMxaH2vkU3CJaWTFGGyiHzp4r7s9QNKjuNdqJXCl&show_text=true&width=500"
                         width="500" height="785" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                         allowfullscreen="true"
@@ -631,6 +642,7 @@
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v14.0"
         nonce="6mNoYMcY"></script>
     <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/b8a53061f1.js" crossorigin="anonymous"></script>
     <script>var countDownDate = new Date("Oct 1, 2022 00:00:00").getTime();
 
         // Update the count down every 1 second

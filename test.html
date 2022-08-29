@@ -6,96 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
-
     <style>
-        .container1 {
-            position: relative;
-            /* width: 50%; */
-        }
-
-        .image {
-            opacity: 1;
-            display: block;
-            width: 100%;
-            height: auto;
-            transition: .5s ease;
-            backface-visibility: hidden;
-        }
-
-        .middle {
-            transition: .5s ease;
-            opacity: 0;
-            /* position: absolute; */
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            /* text-align: center; */
-        }
-
-
-        .card-title {
-            font-size: 1em;
-        }
-
-        .card-text {
-            font-size: .8em;
-        }
-
-        .container1 {
-            display: inline;
-            margin-bottom: 5px;
-        }
-
-        .container1:hover .image {
-            opacity: 0.3;
-        }
-
-        .container1:hover .middle {
-            opacity: 1;
-        }
-
-        .text {
-            /* background: rgba(255, 255, 255, 0.5); */
-            color: black;
-            font-size: 16px;
-            /* padding: 2px 2px; */
-        }
-
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 0 4px;
-        }
-
-        /* Create four equal columns that sits next to each other */
-        .column {
-            flex: 33%;
-            max-width: 33%;
-            padding: 0 5px;
-        }
-
-        .column img {
-            margin-top: 8px;
-            vertical-align: middle;
-            width: 100%;
-        }
-
-        /* Responsive layout - makes a two column-layout instead of four columns */
-
-        .card-title {
-            font-size: 1em;
-        }
-
-        .card-text {
-            font-size: .8em;
-        }
-
-        @media screen and (max-width: 991px) {
+        /* a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
             .column {
                 flex: 50%;
                 max-width: 50%;
@@ -103,64 +19,34 @@
         }
 
         /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 780px) {
+        @media screen and (max-width: 600px) {
             .column {
                 flex: 100%;
                 max-width: 100%;
             }
         }
-
-        .container1 {
-            transition: 0.5s;
-            cursor: pointer;
-            border: 1px;
-        }
-
-        .container1:hover {
-            transform: scale(1.05);
-            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .container1::before,
-        .container1::after {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            transform: scale3d(0, 0, 1);
-            transition: transform .3s ease-out 0s;
-            background: rgba(255, 255, 255, 0.1);
-            content: '';
-            pointer-events: none;
-        }
-
-        .container1::before {
-            transform-origin: left top;
-        }
-
-        .container1::after {
-            transform-origin: right bottom;
-        }
-
-        .container1:hover::before,
-        .container1:hover::after,
-        .container1:focus::before,
-        .container1:focus::after {
-            transform: scale3d(1, 1, 1);
-        }
-
-        .buttonModal {
-            /* margin-left: 40px; */
-            margin-top: 10px;
-            margin-bottom: 20px;
-            width: 100%;
-        }
     </style>
-    <title>Menu</title>
+    <title>Home</title>
 </head>
 
 <body>
+
+
+    <!-- <div class="row homepageTop pt-3 pb-5">
+        <div class="col-4 pt-3">
+            <p class="karlaP" style="display: inline">Order via</p>
+            <img src="/img/icons/foodpanda panda icon 2.30.32 PM.png" class="delivery">
+            <img src="/img/icons/grab icon.png" class="delivery">
+        </div>
+        <div class="col-4 onlypansicon pt-3 pb-5">
+            <img src="/img/icons/onlypansicon.png" class="img-fluid">
+        </div>
+        <div class="col-4 pt-3">
+            <img src="/img/icons/addtocart.png" class="img-fluid delivery">
+        </div>
+    </div> -->
+
+
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="/img/onlypans profile picture.jpeg" alt="" width="60"
@@ -171,24 +57,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
-                    <li class="nav-item ms-2 me-2">
+                    <li class="nav-item">
                         <button type="button" class="btn text-white fs-5 karlaT" data-bs-toggle="modal"
                             data-bs-target="#signInModal">
                             Sign In
                         </button>
                     </li>
-                    <li class="nav-item ms-2 me-2">
-                        <a class="nav-link active text-white karlaT" aria-current="page" href="/index.html"><i
-                                class="fa-solid fa-house">Home</i></a>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white karlaT" aria-current="page" href="/index.html">Home</a>
                     </li>
-                    <li class="nav-item ms-2 me-2">
+                    <li class="nav-item">
                         <a class="nav-link active text-white karlaT" aria-current="page" href="/menu.html">Our
                             Menu</a>
                     </li>
-                    <li class="nav-item ms-2 me-2">
+                    <li class="nav-item">
                         <a class="nav-link text-white karlaT" href="/events.html">Events</a>
                     </li>
-                    <li class="nav-item ms-2 me-2">
+                    <li class="nav-item">
                         <a class="nav-link text-white karlaT" href="/aboutUs.html">About Us</a>
                     </li>
                 </ul>
@@ -199,7 +84,44 @@
         </div>
     </nav>
 
-    <!-- signInModal start-->
+    <div class="container">
+
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signUpLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- <p class="text-start fs-6 fs-strong">ApplicationUser</p> -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <button type="button" class="btn btn-primary col-3 me-5">Sign Up</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Close</button> -->
+                    <p class="text-start text-secondary">Sign up successful!
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Sign In Modal -->
     <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -219,911 +141,339 @@
                             <label for="exampleInputPassword1" class="form-label">Password</label>
                             <input type="password" class="form-control" id="exampleInputPassword1">
                         </div>
-                        <div class="row mb-3">
-                            <button type="button" class="btn btn-danger col-3 ms-2">Sign In</button>
-                            <button type="button" class="btn btn-danger col-3 ms-auto me-3" data-bs-toggle="modal"
-                                data-bs-target="#signUpModal">
-                                Sign Up
-                            </button>
-
-                        </div>
+                        <button type="button" class="btn btn-primary col-3 me-5">Sign In</button>
+                        <button type="button" class="btn btn-primary col-3 ms-auto me-3" data-bs-toggle="modal"
+                            data-bs-target="#signUpModal">
+                            Sign Up
+                        </button>
                     </form>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Close</button> -->
+                    <p class="text-start text-secondary">Sign up successful!
                 </div>
             </div>
         </div>
     </div>
-    <!-- signInModal end -->
+
+    <!-- end of nav -->
+
+    <!-- favorites start -->
+
+    <!-- favorites end -->
 
 
-    <!-- signUpModal start -->
-    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <!-- location start -->
+    <div class="mt-1 mb-5">
+        <img src="/img/Carousel/onlyPansStore.png" class="img-fluid opacity-75">
+    </div>
+    <!-- location end -->
+
+    <!-- favorite row start -->
+    <div class="container sectionOneFavorite">
+        <div class="row d-flex flex-md-row flex-sm-column mt-5 mb-5 ">
+            <div class="col imgFavorite1">
+                <img src="/img/Menu/quesa birria taco.png" class="card-img-top container1" alt="...">
+            </div>
+            <div class="col">
+                <h5 class="titleFavorite mb-3">Quesa Birria Taco</h5>
+                <p class="textFavorite">Easily our best seller, everyone who comes to OnlyPans come to have a taste of
+                    this delectible dish.</p>
+                <p class="textFavorite">To serve this dish USDA beef is slowly cooked in authentic mexican chills and 16
+                    spices with top grade mozzarella cheese, 3 kinds of sauces, pico de gallo & lime.</p>
+                <p class="textFavorite">Our customers who have tried our Quesa Birria Taco always come back to have a
+                    bite of this dish. </p>
+            </div>
+        </div>
+        <div class="row d-flex flex-md-row flex-sm-column mt-5 mb-5">
+            <div class="col ">
+                <h5 class="titleFavorite mb-3">Cartinas Taco</h5>
+                <p class="textFavorite">For those who opt to savor the flavor of pork we have Cartinas Taco to satisfy
+                    your cravings.</p>
+                <p class="textFavorite">Made from slow cooked top grade pork meat aat our house special recipe, topped
+                    with pickled onions and chipotle barbecue sauce.</p>
+                <p class="textFavorite">Truly, Cartinas Taco is an experience you will never forget.</p>
+            </div>
+            <div class="col imgFavorite2 mb-3">
+                <img src="/img/Menu/carnitas taco.png" class="card-img-top container1" alt="...">
+            </div>
+        </div>
+        <div class="row d-flex flex-md-row flex-sm-column mt-5 mb-5 ">
+            <div class="col imgFavorite1">
+                <img src="/img/Menu/camaron shrimp tostadas.png" class="card-img-top img-fluid" alt="...">
+            </div>
+            <div class="col">
+                <h5 class="titleFavorite mb-3">Camaron Tostadas</h5>
+                <p class="textFavorite">We you are a seafood type of person Camaron Tostadas will definitely suite your
+                    tastebud.</p>
+                <p class="textFavorite">This selection is cooked with fresh shrimp in house special marinade, dipped in
+                    beer batter & served with homemade coleslaw, alfalfa, red radish & pickled onions.</p>
+                <p class="textFavorite">You will, for sure, enjoy our offer.</p>
+            </div>
+        </div>
+        <div class="row d-flex flex-md-row flex-sm-column mt-5 mb-5">
+            <div class="col ">
+                <h5 class="titleFavorite mb-3">Quesadillas</h5>
+                <p class="textFavorite">After experiencing our best seller you might want to venture into our other
+                    choices. Quesadillas is definitely one of our best.</p>
+                <p class="textFavorite">Made with soft tortillas with your choice of meat filled with cheese and spices,
+                    served with house special sauces and pico de gallo.</p>
+                <p class="textFavorite">For the meat you can select beef, shrimp, pork, chicken or cheese. Truly, you
+                    would not get tired of it.</p>
+            </div>
+            <div class="col imgFavorite2 mb-3">
+                <img src="/img/Menu/quesadillas.png" class="card-img-top" alt="...">
+            </div>
+        </div>
+    </div>
+    <!-- favorite row end -->
+
+    <!-- favorite column start-->
+    <div class="container sectionTwoFavorite">
+        <div class="mt-5 mb-5">
+            <img src="/img/Menu/quesa birria taco.png" class="card-img-top container1" alt="...">
+            <h5 class="titleFavorite mb-3">Quesa Birria Taco</h5>
+            <p class="textFavorite">Easily our best seller, everyone who comes to OnlyPans come to have a taste of
+                this delectible dish.</p>
+            <p class="textFavorite">To serve this dish USDA beef is slowly cooked in authentic mexican chills and 16
+                spices with top grade mozzarella cheese, 3 kinds of sauces, pico de gallo & lime.</p>
+            <p class="textFavorite">Our customers who have tried our Quesa Birria Taco always come back to have a
+                bite of this dish. </p>
+        </div>
+        <div class="mt-5 mb-5">
+            <img src="/img/Menu/carnitas taco.png" class="card-img-top container1" alt="...">
+            <h5 class="titleFavorite mb-3">Cartinas Taco</h5>
+            <p class="textFavorite">For those who opt to savor the flavor of pork we have Cartinas Taco to satisfy
+                your cravings.</p>
+            <p class="textFavorite">Made from slow cooked top grade pork meat aat our house special recipe, topped
+                with pickled onions and chipotle barbecue sauce.</p>
+            <p class="textFavorite">Truly, Cartinas Taco is an experience you will never forget.</p>
+        </div>
+        <div class="mt-5 mb-5">
+            <h5 class="titleFavorite mb-3">Camaron Tostadas</h5>
+            <p class="textFavorite">We you are a seafood type of person Camaron Tostadas will definitely suite your
+                tastebud.</p>
+            <p class="textFavorite">This selection is cooked with fresh shrimp in house special marinade, dipped in
+                beer batter & served with homemade coleslaw, alfalfa, red radish & pickled onions.</p>
+            <p class="textFavorite">You will, for sure, enjoy our offer.</p>
+        </div>
+        <div class="mt-5 mb-5">
+            <img src="/img/Menu/quesadillas.png" class="card-img-top" alt="...">
+            <h5 class="titleFavorite mb-3">Quesadillas</h5>
+            <p class="textFavorite">After experiencing our best seller you might want to venture into our other
+                choices. Quesadillas is definitely one of our best.</p>
+            <p class="textFavorite">Made with soft tortillas with your choice of meat filled with cheese and spices,
+                served with house special sauces and pico de gallo.</p>
+            <p class="textFavorite">For the meat you can select beef, shrimp, pork, chicken or cheese. Truly, you
+                would not get tired of it.</p>
+        </div>
+    </div>
+    <!-- favorite column end -->
+
+
+    <!-- info start -->
+    <div class="mt-5 mb-5">
+        <!-- <h1 class="text-center display-3 karlaT">Onlypans Favorites</h1> -->
+        <div class="card-group row d-flex flex-row justify-content-center info">
+            <div class="card col-3 container1 info1">
+                <div class="text-center mb-2">
+                    <img src="/img/icons/delivery motorbike.jpeg" class="infoImg" alt="deliveryIcon">
+                </div>
+                <p class="infoT text-center">Order online</p>
+                <p class="infoP text-center"><a href="https://www.foodpanda.ph/restaurant/j5oj/onlypans-taqueria"
+                        target="_blank">Food
+                        Panda</a> and <a href="https://food.grab.com/ph/en/restaurant/error-delivery/2-C3AYC8CJMGJUHE"
+                        target="_blank">Grab</a>
+                </p>
+            </div>
+            <div class="card col-3 container1 info2">
+                <div class="text-center mb-2">
+                    <a href="https://www.facebook.com/onlypansph/?ref=page_internal" target="_blank"><img
+                            src="/img/icons/facebook.png" class="infoImg2 container1 img-rounded"
+                            alt="Only Pans Facebook Page"></a>
+                    <a href="https://www.instagram.com/onlypanspoblacion/?hl=en" target="_blank"><img
+                            src="/img/icons/instagram.png" class="infoImg2 container1 img-rounded"
+                            alt="Only Pans Instagram Page"></a>
+                </div>
+                <p class="infoT text-center">Our Facebook and Instagram Accounts</p>
+                <!-- <p class="infoP text-center">Click on icons to visit our social media accounts</p> -->
+            </div>
+            <div class="card col-3 container1 info3">
+                <div class="text-center mb-2">
+                    <img src="/img/icons/promo.png" class="infoImg" alt="promoIcon">
+                </div>
+                <p class="infoP text-center">Countdown to our promotion</p>
+                <p id="demo"></p>
+            </div>
+            <!-- <div class="card col-3 container1 info3">
+                    <div class="text-center">
+                        <img src="/img/icons/promo.png" class="infoImg3" alt="...">
+                    </div>
+                    <p class="infoT fs-5 fw-strong text-center">Promo</p>
+                    <p class="infoP text-center">Countdown to our promotion</p>
+                </div> -->
+        </div>
+    </div>
+    <!-- info end -->
+
+    <!-- promo start -->
+    <div class="container promoBackGround">
+        <p class="textCountDown text-center">Countdown to our promotion</p>
+        <p id="demo"></p>
+    </div>
+    <!-- promo end -->
+
+
+    <!-- reviews start carousel -->
+    <div class="reviews w-100 mt-5 mb-5 container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <button type="button" class="btn border-0" data-bs-toggle="modal" data-bs-target="#reviewOneModal">
+                        <div class="row text-center">
+                            <div class="col-12 mt-1">
+                                <img src="/img/reviews/Review profilepic1.png" class="d-inline img-fluid ms-5"
+                                    alt="profile pic1">
+                                <p class="reviewName d-inline">Michael Nepomuceno</p>
+                                <p class="reviewActual mb-1">"The place was jam packed and when we got there
+                                    they're already sold out, but the owner informed me that they'll restock after 2
+                                    hours. Came back after 2 hours
+                                    and was not disappointed. Ordered quesadilla and quesa birria (best seller),
+                                    worth
+                                    it! Will definitley come back!”</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <div class="carousel-item">
+                    <button type="button" class="btn border-0" data-bs-toggle="modal" data-bs-target="#reviewTwoModal">
+                        <div class="row text-center">
+                            <div class="col-12 mt-1">
+                                <img src="/img/reviews/Review profilepic2.png" class="d-inline img-fluid ms-5"
+                                    alt="profile pic2">
+                                <p class="reviewName d-inline">Vanna JD</p>
+                                <p class="reviewActual mb-1">"Been wanting to pop by Poblacion for their tacos,
+                                    but I can’t wait so Foodpanda na lang! I ordered the Queso Birria Tacos and
+                                    Cheese
+                                    Quesadilla.
+                                    Their tacos are pretty loaded! It’s true that you get what you pay for. 1 taco
+                                    and 2
+                                    slices of quesadilla lang kinain ko for lunch and it was pretty filling.
+                                    Nasarapan ba ako? YES! I am aware of some feedback na maalat daw… happy to share
+                                    that mine wasn’t 🙌🏼 Maybe they tweaked the recipe na… so give it another shot
+                                    💖💖💖"</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <div class="carousel-item">
+                    <button type="button" class="btn border-0" data-bs-toggle="modal"
+                        data-bs-target="#reviewThreeModal">
+                        <div class="row mt-1 text-center">
+                            <div class="col-12 mt-1">
+                                <img src="/img/reviews/Review profilepic3.png" class="d-inline img-fluid ms-5"
+                                    alt="profile pic3">
+                                <p class="reviewName d-inline mb-1">Katriz Rafanan </p>
+                                <p class="reviewActual">"We visit the onlypans poblacion today and they are
+                                    doing sanitation & cleaning, we are very sad bec we drove 3 hrs from Rizal to
+                                    Makati
+                                    just to try the tacos! But the owner let us experience the goodness of their
+                                    food 🥲
+                                    AAAAND THE FOOD WAS SO SO DELICIOUS AND OUTRAGEOUS!!!
+                                    CANT GET ENOUGH OF THEIR TACOS, THE BEST THEEEEE BEST 🌮😭😭😭😭😭😭😭
+                                    100/100 PERIODTTTT"</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- reviews end carousel-->
+
+    <!-- reviews modal start-->
+
+    <!-- reviewOneModal start -->
+    <div class="modal fade" id="reviewOneModal" tabindex="-1" aria-labelledby="reviewOneModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="signUpLabel">Sign Up</h5>
+                    <h5 class="modal-title" id="reviewOneModal">Review</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
-                        </div>
-                        <div class="row mb-3">
-                            <button type="button" class="btn btn-danger col-3 ms-auto me-3" data-bs-toggle="modal"
-                                data-bs-target="#signUpModal">
-                                Sign Up
-                            </button>
-                        </div>
-                    </form>
+                <div class="modal-body iframeCenter">
+                    <iframe
+                        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmichael.nepomuceno.10%2Fposts%2Fpfbid02zLnAzATJcKdyBqmCMyaRPaBtTTgf7RmKyN3PjvdXm5bqyQpGnasMDiFwnDb3DrmNl&show_text=true&width=500"
+                        width="500" height="714" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                        allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- reviewOneModal end -->
 
-    <!-- menu start -->
-    <div class="container mt-5 mb-5">
-        <div class="row">
-            <div class="column">
-                <div class="container1">
-                    <img src="/img/Menu/Full size/queza biria tacos.webp" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <div>
-                            <h5 class="card-title">Quesa Birria Taco</h5>
-                            <p class="card-text">Slow cooked USDA beef in
-                                authentic mexican chills.
-                            </p>
-                            <div class="row">
-                                <p class="col card-text">Solo: P380</p>
-                                <p class="card-text">Amigas: P750</p>
-                            </div>
-                            <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
-                                data-bs-target="#quesabirriataco">
-                                Order
-                            </button>
-                        </div>
-                    </div>
-
+    <!-- reviewTwoModal start -->
+    <div class="modal fade" id="reviewTwoModal" tabindex="-1" aria-labelledby="reviewTwoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reviewTwoModal">Review</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="container1">
-                    <img src="/img/Menu/Full size/carnicas taco.webp" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <h5 class="card-title">Carnitas Taco (pulled pork)</h5>
-                        <p class="card-text">Slow cooked top grade pork meat
-                            in our housespecial recipe</p>
-                        <div class="row">
-                            <p class="card-text col">Solo: P350
-                            </p>
-                            <p class="card-text col">Amigas: P680
-                            </p>
-                        </div>
-                        <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
-                            data-bs-target="#carnitasTaco">
-                            Order
-                        </button>
-                    </div>
+                <div class="modal-body iframeCenter">
+                    <iframe
+                        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fzuperbanana%2Fposts%2Fpfbid034iFqunqKCLv2Mieyurt53BYeR6Cpxk33Ljtc7zqar2hKKjMCpcrf16jbL7o1vo4ul&show_text=true&width=500"
+                        width="500" height="556" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                        allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
-
-                <div class="container1">
-                    <img src="/img/Menu/Full size/camaron taco.webp" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <h5 class="card-title">Camaron Taco</h5>
-                        <p class="card-text">Fresh shrimp in house special
-                            marinade.
-                        </p>
-                        <div class="row">
-                            <p class="card-text col">Solo: P400
-                            </p>
-                            <p class="card-text col">Amigas: P780
-                            </p>
-                        </div>
-                        <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
-                            data-bs-target="#camaronTaco">
-                            Order
-                        </button>
-                    </div>
-                </div>
-
-                <div class="container1">
-                    <img src="/img/Menu/Full size/camaron tostadas.webp" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <h5 class="card-title">Camaron Tostadas</h5>
-                        <p class="card-text">Fresh shrimp in house special
-                            marinade, dipped in beer batter.
-                        </p>
-                        <div class="row">
-                            <p class="card-text col">Solo: P400
-                            </p>
-                            <p class="card-text col">Amigas: P780
-                            </p>
-                        </div>
-                        <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
-                            data-bs-target="#camaronTostadas">
-                            Order
-                        </button>
-                    </div>
-                </div>
-                <div class="container1">
-                    <img src="/img/Menu/Full size/pescado taco.webp" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <h5 class="card-title">Pescado Taco</h5>
-                        <p class="card-text">Fish meat in house special
-                            marinade.
-                        </p>
-                        <p class="card-text col">Solo: P300
-                        </p>
-                        <p class="card-text col">Amigas: P580
-                        </p>
-                        <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
-                            data-bs-target="#pescadoTaco">
-                            Order
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2nd -->
-            <div class="column">
-                <div class="container1">
-                    <img src="/img/Menu/Full size/quesadillas.webp" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <h5 class="card-title">Quesadillas</h5>
-                        <p class="card-text">Soft tortilla with your
-                            choice of meat filled with cheese and spices.
-                        </p>
-                        <div class="row row-cols-2">
-                            <p class="card-text col">Carne
-                                400</small>
-                            </p>
-                            <p class="card-text col">Pollo
-                                300
-                            </p>
-                        </div>
-                        <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
-                            data-bs-target="#quesadillas">
-                            Order
-                        </button>
-                    </div>
-                </div>
-                <div class="container1">
-                    <img src="/img/Menu/Full size/borrito.webp" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <h5 class="card-title">Borrito</h5>
-                        <p class="card-text">Cilantro lime rice with choice of meat.
-                        </p>
-                        <div class="row">
-                            <p class="card-text col">Solo wrap:
-                                P400
-                            </p>
-                            <p class="card-text col">Solo naked:
-                                P350
-                            </p>
-                        </div>
-                        <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
-                            data-bs-target="#borrito">
-                            Order
-                        </button>
-                    </div>
-                </div>
-                <div class="container1">
-                    <img src="/img/Menu/Full size/regules taco.jpeg" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <h5 class="card-title">Regulares Taco</h5>
-                        <p class="card-text">Our one of a kind Mexican
-                            street tacos.
-                        </p>
-                        <p class="card-text col">Barbacoa Taco: P350
-                        <p class="card-text col">Chicharronnes Taco: P300</p>
-                        <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
-                            data-bs-target="#regularesTaco">
-                            Order
-                        </button>
-                    </div>
-                </div>
-                <div class="container1">
-                    <img src="/img/Menu/Full size/ahumadas.webp" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <h5 class="card-title">Ahumadas "Smoke Meat"</h5>
-                        <p class="card-text">Meat smoked and slow cooked
-                            for
-                            16 hours.
-                        </p>
-                        <div class="row">
-                            <p class="card-text col">Carne: P650
-                            </p>
-                            <p class="card-text col">Polo: P300
-                            </p>
-                        </div>
-                        <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
-                            data-bs-target="#ahumadas">
-                            Order
-                        </button>
-                    </div>
-                </div>
-                <div class="container1">
-                    <img src="/img/Menu/Full size/tacolitos plato.webp" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <h5 class="card-title">Tacolitos Plato</h5>
-                        <p class="card-text">8 sampler tacos, differrent flavors.
-                        </p>
-                        <p class="card-text col">Bandeja "1 tray":
-                            P1200
-                        </p>
-                        <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
-                            data-bs-target="#tacolitosPlato">
-                            Order
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 3rd -->
-            <div class="column">
-                <div class="container1">
-                    <img src="/img/Menu/Full size/nachos con carne.webp" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <h5 class="card-title">Nachos Con Carne</h5>
-                        <p class="card-text">Hot, crispy nachos topped with flavours
-                        </p>
-                        <p class="card-text col">Solo: P350</p>
-                        <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
-                            data-bs-target="#nachosConCarne">
-                            Order
-                        </button>
-                    </div>
-                </div>
-                <div class="container1">
-                    <img src="/img/Menu/Full size/camaron cevichi resized.png" alt="Avatar" class="image"
-                        style="width:100%">
-                    <div class="middle">
-                        <h5 class="card-title">Camaron Ceviche</h5>
-                        <p class="card-text">Raw shrimp cooked in lime
-                            juice with choice flavors.</p>
-                        <p class="card-text col ">Solo: P400
-                        </p>
-                        <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
-                            data-bs-target="#camaronCevichi">
-                            Order
-                        </button>
-                    </div>
-                </div>
-
-                <div class="container1">
-                    <img src="/img/Menu/Full size/sopa de tortilla.webp" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <h5 class="card-title">Sopa de Tortilla</h5>
-                        <p class="card-text">Our version of mexican corn soup.
-                        </p>
-                        <p class="card-text col ">Solo: P200
-                        </p>
-                        <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
-                            data-bs-target="#sopaDeTortilla">
-                            Order
-                        </button>
-                    </div>
-                </div>
-                <div class="container1">
-                    <img src="/img/Menu/Full size/cervezas resized.png" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <h5 class="card-title">Cervezas "Beer"</h5>
-                        <p class="card-text">Enjoy your meal with these ice
-                            cold cervezas.
-                        </p>
-                        <p class="card-text col">Corona: P200
-                        </p>
-                        <p class="card-text col">San Mig Pale Pilsen: P
-                            150
-                        </p>
-                        <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
-                            data-bs-target="#cervezas">
-                            Order
-                        </button>
-                    </div>
-                </div>
-                <div class="container1">
-                    <img src="/img/Menu/Full size/horchata.webp" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                        <h5 class="card-title">Horchata</h5>
-                        <p class="card-text">Mexican rice milk with dairy
-                            milk, cinnamon & vanilla.
-                        </p>
-                        <p class="card-text col">12 oz cup: P150
-                        </p>
-                        <p class="card-text col">350ml bottle: P200</p>
-                        <button type="button" class="btn btn-danger buttonModal col-6" data-bs-toggle="modal"
-                            data-bs-target="#horchata">
-                            Order
-                        </button>
-                    </div>
-                </div>
-                <!-- <div class="container1">
-                        <img src="/img/Menu/Full size/tacolitos plato.webp" alt="Avatar" class="image"
-                            style="width:100%">
-                        <div class="middle">
-
-                        </div> -->
-            </div>
-        </div>
-    </div>
-
-
-    <!-- modal -->
-    <!-- modal 1 -->
-    <div>
-        <div>
-            <div class="modal fade" id="quesabirriataco" tabindex="-1" aria-labelledby="quesabirriatacoLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="quesabirriatacoLabel">Quesa Birria Caco</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="/img/Menu/Full size/queza biria tacos.webp" class="img-fluid mb-2">
-                            <h5>Quesa Birria Taco</h5>
-                            <p><small class="text-muted">Slow cooked USDA beef in
-                                    authentic mexican chills and 16 spices with top grade mozarella cheese,
-                                    3 kinds of sauces, pico de gallo & lime.</small>
-                            </p>
-                            <div class="row">
-                                <p class="col"><small class="text-muted text-dark">Solo: P380</small>
-                                </p>
-                                <p class="col"><small class="text-muted">Amigas: P750</small>
-                                </p>
-                            </div>
-                            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="4">Four</option>
-                                <option value="5">Five</option>
-                            </select>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Add to Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div class="modal fade" id="carnitasTaco" tabindex="-1" aria-labelledby="carnitasTacoLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="carnitasTacoLabel">Carnitas Taco</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="/img/Menu/Full size/carnicas taco.webp" class="img-fluid mb-2">
-                            <h5 class="card-title">Carnitas Taco (pulled pork)</h5>
-                            <p class="card-text"><small class="text-muted">Slow cooked top grade pork meat
-                                    in our housespecial recipe, topped with pickled onions and chipotle
-                                    barbeque sauce</small>
-                            </p>
-                            <div class="row">
-                                <p class="card-text col"><small class="text-muted">Solo: P350</small>
-                                </p>
-                                <p class="card-text col"><small class="text-muted">Amigas: P680</small>
-                                </p>
-                            </div>
-                            <select class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="4">Four</option>
-                                <option value="5">Five</option>
-                            </select>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div class="modal fade" id="camaronTaco" tabindex="-1" aria-labelledby="camaronTacoLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="camaronTacoLabel">Camaron Taco</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="/img/Menu/Full size/carnicas taco.webp" class="img-fluid mb-2">
-                            <h5 class="card-title">Camaron Tostadas</h5>
-                            <p class="card-text"><small class="text-muted">Fresh shrimp in house special
-                                    marinade, dipped in beer batter & served with homemade coleslaw,
-                                    alfalfa, red radish & pickled onion</small>
-                            </p>
-                            <div class="row">
-                                <p class="card-text col"><small class="text-muted">Solo: P400</small>
-                                </p>
-                                <p class="card-text col"><small class="text-muted">Amigas: P780</small>
-                                </p>
-                            </div>
-                            <select class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="4">Four</option>
-                                <option value="5">Five</option>
-                            </select>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div class="modal fade" id="camaronTostadas" tabindex="-1" aria-labelledby="camaronTostadasLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="camaronTostadasLabel">Camaron Tostadas</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="/img/Menu/Full size/camaron tostadas.webp" class="img-fluid mb-2">
-                            <h5 class="card-title">Camaron Tostadas</h5>
-                            <p class="card-text"><small class="text-muted">Fresh shrimp in house special
-                                    marinade, dipped in beer batter & served with homemade coleslaw,
-                                    alfalfa, red radish & pickled onion</small>
-                            </p>
-                            <div class="row">
-                                <p class="card-text col"><small class="text-muted">Solo: P400</small>
-                                </p>
-                                <p class="card-text col"><small class="text-muted">Amigas: P780</small>
-                                </p>
-                            </div>
-                            <select class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="4">Four</option>
-                                <option value="5">Five</option>
-                            </select>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div>
-            <div class="modal fade" id="pescadoTaco" tabindex="-1" aria-labelledby="pescadoTacoLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="pescadoTacoLabel">Pescado Taco</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="/img/Menu/Full size/pescado taco.webp" class="img-fluid mb-2">
-                            <h5 class="card-title">Pescado Taco</h5>
-                            <p class="card-text"><small class="text-muted">Fish meat in house special
-                                    marinade, dipped in beer batter & served with home made coleslaw,
-                                    alfalfa, red radish & pickled onions</small>
-                            </p>
-                            <p class="card-text col"><small class="text-muted">Solo: P300</small>
-                            </p>
-                            <p class="card-text col"><small class="text-muted">Amigas: P580</small>
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Order</button>
-                        </div>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <!-- modal 2 -->
-    <div>
-        <div>
-            <div class="modal fade" id="quesadillas" tabindex="-1" aria-labelledby="quesadillasLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="quesadillasLabel">Quesadillas</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="/img/Menu/Full size/quesadillas.webp" class="img-fluid mb-2">
-                            <h5>Quesadillas</h5>
-                            <p class="card-text"><small class="text-muted">Soft tortilla with your
-                                    choice of meat filled with cheese and spices. Served with house
-                                    special sauces and pico de gallo.</small>
-                            </p>
-                            <div class="row row-cols-2">
-                                <p class="card-text col"><small class="text-muted">Carne
-                                        400</small>
-                                </p>
-                                <p class="card-text col"><small class="text-muted">Camaron
-                                        400</small>
-                                </p>
-                                <p class="card-text col"><small class="text-muted">Carnitas
-                                        350</small>
-                                </p>
-                                <p class="card-text col"><small class="text-muted">Pollo
-                                        300</small>
-                                </p>
-                                <p class="card-text col"><small class="text-muted">Queso
-                                        250</small>
-                                </p>
-                            </div>
-                            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="4">Four</option>
-                                <option value="5">Five</option>
-                            </select>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Add to Order</button>
-                        </div>
-                    </div>
+    <!-- reviewTwoModal end -->
+    <div class="modal fade" id="reviewThreeModal" tabindex="-1" aria-labelledby="reviewThreeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reviewTwoModal">Review</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
-        </div>
-
-        <div>
-            <div class="modal fade" id="borrito" tabindex="-1" aria-labelledby="borritoLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="borritoLabel">Borrito</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="/img/Menu/Full size/borrito.webp" class="img-fluid mb-2">
-                            <h5 class="card-title">Borrito</h5>
-                            <p class="card-text"><small class="text-muted">Cilantro lime rice,
-                                    choice of
-                                    meat, beans, corn, cheese, with garlic sauce. Enjoy and be
-                                    filled
-                                    with its savory flavor.</small>
-                            </p>
-                            <div class="row">
-                                <p class="card-text col"><small class="text-muted">Solo wrap:
-                                        P400</small>
-                                </p>
-                                <p class="card-text col"><small class="text-muted">Solo naked:
-                                        P350</small>
-                                </p>
-                            </div>
-                            <select class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="4">Four</option>
-                                <option value="5">Five</option>
-                            </select>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Order</button>
-                        </div>
-                    </div>
+                <div class="modal-body iframeCenter">
+                    <iframe <iframe
+                        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRafanaaaan%2Fposts%2Fpfbid0293Ds4k7a29ypoqZEBG8XZ3a8puMxaH2vkU3CJaWTFGGyiHzp4r7s9QNKjuNdqJXCl&show_text=true&width=500"
+                        width="500" height="785" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                        allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
-            </div>
-        </div>
-
-        <div>
-            <div class="modal fade" id="regularesTaco" tabindex="-1" aria-labelledby="regularesTacoLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="regularesTacoLabel">Regulares Taco</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="/img/Menu/Full size/carnicas taco.webp" class="img-fluid mb-2">
-                            <h5 class="card-title">Regulares Taco</h5>
-                            <p class="card-text"><small class="text-muted">Our one of a kind Mexican
-                                    street tacos. Enjoy and savor our version of the famous street
-                                    food.</small>
-                            </p>
-                            <p class="card-text col"><small class="text-muted">Barbacoa Taco "Beef
-                                    Cheeks": P350</small>
-                            <p class="card-text col"><small class="text-muted">Chicharronnes Taco
-                                    "Pork
-                                    Rinds": P300</small></p>
-                            <select class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="4">Four</option>
-                                <option value="5">Five</option>
-                            </select>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div class="modal fade" id="ahumadas" tabindex="-1" aria-labelledby="ahumadasLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="ahumadasLabel">Ahumdas</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="/img/Menu/Full size/ahumadas.webp" class="img-fluid mb-2">
-                            <h5 class="card-title">Ahumadas "Smoke Meat"</h5>
-                            <p class="card-text"><small class="text-muted">Meat smoked and slow cooked
-                                    for
-                                    16 hours. Served with house barbeque & chimchurri sauce.</small>
-                            </p>
-                            <div class="row">
-                                <p class="card-text col"><small class="text-muted">Carne: P650</small>
-                                </p>
-                                <p class="card-text col"><small class="text-muted">Polo: P300</small>
-                                </p>
-                            </div>
-                            <select class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="4">Four</option>
-                                <option value="5">Five</option>
-                            </select>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div>
-            <div class="modal fade" id="tacolitosPlato" tabindex="-1" aria-labelledby="tacolitosPlatoLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="tacolitosPlatoLabel">Tacolitos Plato</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="/img/Menu/Full size/tacolitos plato.webp" class="img-fluid mb-2">
-                            <h5 class="card-title">Tacolitos Plato</h5>
-                            <p class="card-text"><small class="text-muted">In this selection we present to
-                                    you 8
-                                    sampler tacos, flavor based on your selection.</small>
-                            </p>
-                            <p class="card-text col"><small class="text-muted">Bandeja "1 tray":
-                                    P1200</small>
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- modal 3 -->
-    <div>
-        <div>
-            <div class="modal fade" id="nachosConCarne" tabindex="-1" aria-labelledby="nachosConCarneLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="nachosConCarneLabel">Nachos Con Carne</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="/img/Menu/Full size/nachos con carne.webp" class="img-fluid mb-2">
-                            <h5 class="card-title">Nachos Con Carne</h5>
-                            <p class="card-text"><small class="text-muted">Made with crispy and
-                                    hot nacho chips topped with another generous serving of marinated
-                                    minced
-                                    beef, tomato, bell pepper with house-made salsa for dipping.</small>
-                            </p>
-                            </p>
-                            <p class="card-text col"><small class="text-muted">Solo (good for sharing):
-                                    P350
-                                </small>
-                            </p>
-                            <button type </div>
-                                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                    <option value="4">Four</option>
-                                    <option value="5">Five</option>
-                                </select>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Add to Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div class="modal fade" id="camaronCevichi" tabindex="-1" aria-labelledby="camaronCevichiLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="camaronCevichiLabel">Camaron Cevichi</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="/img/Menu/Full size/camaron cevichi resized.png" class="img-fluid mb-2">
-                            <h5 class="card-title">Camaron Ceviche</h5>
-                            <p class="card-text"><small class="text-muted">Raw shrimp cooked in lime
-                                    juice
-                                    and tossed fresh tomatoes, onion, jalapenos, bell pepper, and
-                                    cilantro. Perfect for an appetizer before your main meal.</small>
-                            </p>
-                            <p class="card-text col "><small class="text-muted">Solo (good for
-                                    sharing): P400</small>
-                            </p>
-                            <select class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="4">Four</option>
-                                <option value="5">Five</option>
-                            </select>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div class="modal fade" id="sopaDeTortilla" tabindex="-1" aria-labelledby="sopaDeTortillaLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="sopaDeTortillaLabel">Sopa de Tortilla</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="/img/Menu/Full size/sopa de tortilla.webp" class="img-fluid mb-2">
-                            <h5 class="card-title">Sopa de Tortilla (Corn Tortilla Soup</h5>
-                            <p class="card-text"><small class="text-muted">Our version of mexican corn
-                                    soup
-                                    made from fried corn tortilla pieces, submerged into a broth of
-                                    tomato,
-                                    garlic, onion & chile de arbol and epazote.</small>
-                            </p>
-                            <p class="card-text col "><small class="text-muted">Solo (good for
-                                    sharing): P200</small>
-                            </p>
-                            <select class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="4">Four</option>
-                                <option value="5">Five</option>
-                            </select>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div class="modal fade" id="cervezas" tabindex="-1" aria-labelledby="cervezasLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="ahumadasLabel">Cervezas</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="/img/Menu/Full size/cervezas resized.png" class="img-fluid mb-2">
-                            <h5 class="card-title">Cervezas "Beer"</h5>
-                            <p class="card-text"><small class="text-muted">Enjoy your meal with these ice
-                                    cold cervezas.</small>
-                            </p>
-                            <p class="card-text col"><small class="text-muted">Corona: P200</small>
-                            </p>
-                            <p class="card-text col"><small class="text-muted">San Mig Pale Pilsen: P
-                                    150</small>
-                            </p>
-                            <p class="card-text col"><small class="text-muted">San Mig Light: P
-                                    150</small>
-                            </p>
-                            <select class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="4">Four</option>
-                                <option value="5">Five</option>
-                            </select>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div>
-            <div class="modal fade" id="horchata" tabindex="-1" aria-labelledby="horchataLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="horchataLabel">Horchata</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="/img/Menu/Full size/horchata.webp" class="img-fluid mb-2">
-                            <h5 class="card-title">Horchata</h5>
-                            <p class="card-text"><small class="text-muted">Mexican rice milk with dairy
-                                    milk, cinnamon & vanilla</small>
-                            </p>
-                            <p class="card-text col"><small class="text-muted">12 oz cup: P150</small>
-                            </p>
-                            <p class="card-text col"><small class="text-muted">Take Out 350ml glass of
-                                    bottle: P200</small></p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Order</button>
-                        </div>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -1131,18 +481,18 @@
 
 
 
-    <!-- container div -->
+
+    <!-- reviews modal end-->
+
     </div>
 
-    <!-- bottom navigation -->
     <!-- footer start-->
     <footer class="text-white text-center text-lg-start footer">
         <div class="container p-4">
             <div class="row mt-4">
                 <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
                     <h5 class="text-uppercase mb-4 karenT">About Onlypans</h5>
-                    <p class="karlaP">Don't let the name deceive you! Onlypans offers you the best mexican food you
-                        can
+                    <p class="karlaP">Don't let the name deceive you! Onlypans offers you the best mexican food you can
                         find.
                     </p>
                     <p>Our Quesa Birria Tacos with consomme is a mouth-watering marriage between premium beef and
@@ -1212,6 +562,30 @@
         nonce="6mNoYMcY"></script>
     <script src="main.js"></script>
     <script src="https://kit.fontawesome.com/b8a53061f1.js" crossorigin="anonymous"></script>
+    <script>var countDownDate = new Date("Oct 1, 2022 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text
+            if (distance < 0) { clearInterval(x); document.getElementById("demo").innerHTML = "EXPIRED"; }
+        }, 1000);</script>
 </body>
 
 </html>

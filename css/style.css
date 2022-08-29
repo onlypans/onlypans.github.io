@@ -75,8 +75,18 @@
         sans-serif;
     color: RGB(85, 85, 83);
     font-size: 14px;
-    font-weight: 200;
+    font-weight: 400;
 }
+
+.textCountDown {
+    font-family: 'Roboto Condensed',
+        sans-serif;
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
 
 #demo {
     text-align: center;
@@ -84,11 +94,12 @@
     margin-top: 0px;
     font-family: 'Roboto Condensed',
         sans-serif;
-    color: #DB222A;
-
+    color: whitesmoke;
 }
 
-
+.promoBackGround {
+    background-image: url(/img/promotion\ resized.png);
+}
 
 
 .reviews {
@@ -115,11 +126,19 @@
     text-align: start;
 }
 
-.reviewModal {
+.iframeCenter {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+/* countdown */
+#demo {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 0px;
+}
+
 
 .footer {
     background-color:
