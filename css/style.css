@@ -21,11 +21,26 @@
     color: RGB(85, 85, 83);
 }
 
+.titleFavorite {
+    font-family: font-family: 'Merriweather Sans', sans-serif;
+    color: RGB(85, 85, 83);
+    font-size: 35px;
+}
+
+
 .karlaP {
     font-family: 'Roboto Condensed',
         sans-serif;
     color: RGB(85, 85, 83);
 }
+
+.textFavorite {
+    font-family: 'Roboto Condensed',
+        sans-serif;
+    color: RGB(85, 85, 83);
+    font-size: 15px;
+}
+
 
 .faveText {
     font-family: font-family: 'Merriweather Sans', sans-serif;
@@ -72,6 +87,9 @@
     color: #DB222A;
 
 }
+
+
+
 
 .reviews {
     height: 15em;
@@ -418,16 +436,46 @@ h1 {
 
 /* menu font css */
 
+@media screen and (max-width: 1400px) {
+    .sectionTwoFavorite {
+        display: none;
+    }
+}
 
 
 @media screen and (max-width: 767px) {
     .reviews {
         height: 18em;
     }
+
+    .sectionOneFavorite {
+        display: none
+    }
+
+    .sectionTwoFavorite {
+        display: block
+    }
+
 }
 
 @media screen and (max-width: 428px) {
     .reviews {
         height: 20em;
+    }
+
+    .sectionOneFavorite {
+        display: none
+    }
+
+    .sectionTwoFavorite {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .imageTwoFavorite,
+    .textTwoFavorite {
+        display: inline-block;
     }
 }
