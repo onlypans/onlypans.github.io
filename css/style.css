@@ -117,7 +117,7 @@
 }
 
 .promoBackGround {
-    background-image: url(/img/promotion\ resized.png);
+    background: linear-gradient(to right, #93291E, #ED213A);
 }
 
 
